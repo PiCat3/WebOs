@@ -1,0 +1,144 @@
+.openbutton {
+    cursor: pointer; 
+    margin-right: 150px;
+}
+
+.openbuttonimg {
+    padding-top: 5px; 
+    width: 2vh; 
+    height: 2vh; 
+    object-fit:cover;
+}
+
+.closebutton {
+    display:flex;
+    cursor: pointer; 
+    justify-content: flex-end;    
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.closebuttonimg {
+    width: 2vh;
+    height: 2vh; 
+    background-color: rgba(181, 226, 238, 0.25); 
+    object-fit:cover;
+}
+
+
+
+
+
+.topbar {
+    position: absolute;
+    width: 99%;
+    display:flex;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0,0,0,0.25);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.window {
+    display: none;
+    border:solid;
+    top: 40%; left:40%; 
+    transform: translate(-50%,-50%); 
+    padding:10px;
+    width:728px;
+    height: 512px;
+    background-color:#fff;
+    border-radius:8px;
+    flex-direction:column;
+    position:absolute;
+}
+
+.windowheader {
+    width: 99%;
+    height: 15%;
+    padding: 5px;
+    backdrop-filter: blur(10px); 
+    background-color: rgba(181, 226, 238, 0.25); 
+    border-radius: 16px;
+}
+
+.headertext { 
+    padding-left: 5px;
+    color: black;
+    font-weight: 500;
+}
+
+
+
+
+.welcomewindow {
+    border:solid; 
+    top: 50%; left:50%; 
+    transform: translate(-50%,-50%); 
+    padding: 10px; 
+    border: solid; 
+    width: 512px; 
+    height: 512px;
+    background-color: #fff;
+    border-radius: 16px;
+    flex-direction: column;
+    position: absolute;
+}
+
+.welcomeheadertext {
+    padding-left: 4px; 
+}
+
+.welcometext {
+    padding-left: 4px; 
+}
+
+.welcomecatimg {
+    width:1.7vh; 
+    height:1.7vh; 
+    border-radius:64px; 
+    object-fit:cover;
+}
+
+.welcomecatimgbig {
+    width:30vh; 
+    height:20vh; 
+    object-fit:cover;
+}
+
+.main {
+    font-family: cursive; 
+    background-image: url(graphics/GreenGrassField.jpg); 
+    background-size: cover; 
+    margin: 10px;
+}
+
+.OSname {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+
+
+
+.catgalleryIcon {
+    width: 6vh; 
+    height:6vh; 
+    border-radius: 64px; 
+    border: solid; 
+    border-color: rgba(118, 212, 238, 0.25);
+    cursor:pointer;
+}
+
+.catgalleryAPP {
+    padding-top:80px; 
+    padding-left:16px
+}
+
+
+
+
+.selected {
+    border-color:antiquewhite;
+}
