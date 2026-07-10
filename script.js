@@ -56,7 +56,8 @@ catGalleryScreenClose.addEventListener("click", function() {
 });
 
 catGalleryScreenOpen.addEventListener("click", function() {
-  openWindow(catGalleryScreen);
+  handleIconTap(catGalleryScreenOpen);
+  //openWindow(catGalleryScreen);
 });
 
 //Makes sure the clicked window is ontop
@@ -65,42 +66,40 @@ addWindowTapHandling(catGalleryScreen);
 
 //FUNCTIONS
 function closeWindow(element) {
-    element.style.display = "none"
-}
+    element.style.display = "none";
+};
 
 function openWindow(element) {
-    element.style.display = "flex"
+    element.style.display = "flex";
     biggestIndex++;  // Increment biggestIndex by 1
     element.style.zIndex = biggestIndex;
     topBar.style.zIndex = biggestIndex + 1;
-}
+};
 
 
 
 function selectIcon(element) {
     element.classList.add("selected");
-    selectedIcon = element
-}
+    selectedIcon = element;
+};
 
 function deselectIcon(element) {
     element.classList.remove("selected");
-    selectedIcon = undefined
-}
+    selectedIcon = undefined;
+};
 
 function handleIconTap(element) {
     if (element.classList.contains("selected")) {
-      openWindow(catGalleryScreen)
-      deselectIcon(element)
+      openWindow(catGalleryScreen);
+      deselectIcon(element);
     } else {
-      selectIcon(element)
-    }
-}
-
-
+      selectIcon(element);
+    };
+};
 
 function addWindowTapHandling(element) {
   element.addEventListener("mousedown", function() {
-    handleWindowTap(element)
+    handleWindowTap(element);
   });
 };
 
@@ -109,13 +108,13 @@ function handleWindowTap(element) {
   element.style.zIndex = biggestIndex;
   topBar.style.zIndex = biggestIndex + 1;
   deselectIcon(selectedIcon);
-}
+};
 
 function initializeWindow(element) {
   var screen = document.querySelector("#" + element);
   addWindowTapHandling(screen);
   dragElement(screen);
-}
+};
 
 // Make the DIV element draggable:
 dragElement(document.getElementById("welcome"));
