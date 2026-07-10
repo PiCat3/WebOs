@@ -1,25 +1,46 @@
 //Tracking Time
 function updateTime()  {
-    var currentTime = new Date().toLocaleString()
+    var currentTime = new Date().toLocaleString();
     var timeText = document.querySelector("#timeElement");
-    timeText.innerHTML = currentTime
+    timeText.innerHTML = currentTime;
 }
 setInterval(updateTime, 1000);
 
 //Welcome Window
-var welcomeScreen = document.querySelector("#welcome")
+var welcomeScreen = document.querySelector("#welcome");
 
-var welcomeScreenClose = document.querySelector("#welcomeclose")
-var welcomeScreenOpen = document.querySelector("#welcomeopen")
+var welcomeScreenClose = document.querySelector("#welcomeclose");
+var welcomeScreenOpen = document.querySelector("#welcomeopen");
 
 //APP ICON SELECT
-var selectedIcon = undefined
+var selectedIcon = undefined;
 
 //Cat Gallery
-var catGalleryScreen = document.querySelector("#catgallery")
+var catGalleryScreen = document.querySelector("#catgallery");
 
-var catGalleryScreenClose = document.querySelector("#catgalleryclose")
-var catGalleryScreenOpen = document.querySelector("#catgalleryopen")
+var catGalleryScreenClose = document.querySelector("#catgalleryclose");
+var catGalleryScreenOpen = document.querySelector("#catgalleryopen");
+
+//Tapped Window
+var biggestIndex = 1;
+
+//Topbar
+var topBar = document.querySelector("#topbar");
+
+//WINDOW INITIALIZATIONS
+
+//Welcome Window
+//welcome.initializeWindow(self)
+//welcomeclose.initializeWindow(self)
+//welcomeopen.initializeWindow(self)
+
+//Cat Gallery APP 
+//catgallery.initializeWindow(self)
+//initializeWindow(catgalleryclose)
+//initializeWindow(catgalleryopen)
+
+//Top Bar
+//initializeWindow(topbar)
 
 //Event Detecting
 welcomeScreenClose.addEventListener("click", function() {
@@ -38,13 +59,20 @@ catGalleryScreenOpen.addEventListener("click", function() {
   openWindow(catGalleryScreen);
 });
 
+//Makes sure the clicked window is ontop
+addWindowTapHandling(welcomeScreen);
+addWindowTapHandling(catGalleryScreen);
 
+//FUNCTIONS
 function closeWindow(element) {
     element.style.display = "none"
 }
 
 function openWindow(element) {
     element.style.display = "flex"
+    biggestIndex++;  // Increment biggestIndex by 1
+    element.style.zIndex = biggestIndex;
+    topBar.style.zIndex = biggestIndex + 1;
 }
 
 
@@ -52,7 +80,7 @@ function openWindow(element) {
 function selectIcon(element) {
     element.classList.add("selected");
     selectedIcon = element
-} 
+}
 
 function deselectIcon(element) {
     element.classList.remove("selected");
@@ -68,9 +96,30 @@ function handleIconTap(element) {
     }
 }
 
+
+
+function addWindowTapHandling(element) {
+  element.addEventListener("mousedown", function() {
+    handleWindowTap(element)
+  });
+};
+
+function handleWindowTap(element) {
+  biggestIndex++;  // Increment biggestIndex by 1
+  element.style.zIndex = biggestIndex;
+  topBar.style.zIndex = biggestIndex + 1;
+  deselectIcon(selectedIcon);
+}
+
+function initializeWindow(element) {
+  var screen = document.querySelector("#" + element);
+  addWindowTapHandling(screen);
+  dragElement(screen);
+}
+
 // Make the DIV element draggable:
 dragElement(document.getElementById("welcome"));
-dragElement(document.getElementById("catgallery"))
+dragElement(document.getElementById("catgallery"));
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
 function dragElement(element) {

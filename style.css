@@ -21,7 +21,7 @@
 .closebuttonimg {
     width: 2vh;
     height: 2vh; 
-    background-color: rgba(181, 226, 238, 0.25); 
+    background-color: rgba(226, 246, 252, 0.25); 
     object-fit:cover;
 }
 
@@ -38,6 +38,7 @@
     color: #fff;
     display: flex;
     justify-content: space-between;
+    padding: 0px;
 }
 
 .window {
@@ -59,7 +60,7 @@
     height: 15%;
     padding: 5px;
     backdrop-filter: blur(10px); 
-    background-color: rgba(181, 226, 238, 0.25); 
+    background-color: rgba(181, 223, 235, 0.25); 
     border-radius: 16px;
 }
 
@@ -109,7 +110,7 @@
 
 .main {
     font-family: cursive; 
-    background-image: url(graphics/GreenGrassField.jpg); 
+    background-image: url("graphics/CatOSBackgroundOrange.png");
     background-size: cover; 
     margin: 10px;
 }
@@ -132,7 +133,7 @@
 }
 
 .catgalleryAPP {
-    padding-top:80px; 
+    padding-top:100px; 
     padding-left:16px
 }
 
