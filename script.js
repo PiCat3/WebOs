@@ -21,6 +21,12 @@ var catGalleryScreen = document.querySelector("#catgallery");
 var catGalleryScreenClose = document.querySelector("#catgalleryclose");
 var catGalleryScreenOpen = document.querySelector("#catgalleryopen");
 
+//Cat Notes
+var catNotesScreen = document.querySelector("#catnotes");
+
+var catNotesScreenClose = document.querySelector("#catnotesclose");
+var catNotesScreenOpen = document.querySelector("#catnotesopen");
+
 //Tapped Window
 var biggestIndex = 1;
 
@@ -56,13 +62,23 @@ catGalleryScreenClose.addEventListener("click", function() {
 });
 
 catGalleryScreenOpen.addEventListener("click", function() {
-  handleIconTap(catGalleryScreenOpen);
-  //openWindow(catGalleryScreen);
+  handleIconTap(catGalleryScreenOpen, catGalleryScreen);
 });
+
+catNotesScreenClose.addEventListener("click", function() {
+  closeWindow(catNotesScreen); 
+});
+
+catNotesScreenOpen.addEventListener("click", function() {
+  handleIconTap(catNotesScreenOpen, catNotesScreen);
+});
+
+
 
 //Makes sure the clicked window is ontop
 addWindowTapHandling(welcomeScreen);
 addWindowTapHandling(catGalleryScreen);
+addWindowTapHandling(catNotesScreen);
 
 //FUNCTIONS
 function closeWindow(element) {
@@ -88,9 +104,9 @@ function deselectIcon(element) {
     selectedIcon = undefined;
 };
 
-function handleIconTap(element) {
+function handleIconTap(element,screen) {
     if (element.classList.contains("selected")) {
-      openWindow(catGalleryScreen);
+      openWindow(screen);
       deselectIcon(element);
     } else {
       selectIcon(element);
@@ -119,6 +135,7 @@ function initializeWindow(element) {
 // Make the DIV element draggable:
 dragElement(document.getElementById("welcome"));
 dragElement(document.getElementById("catgallery"));
+dragElement(document.getElementById("catnotes"));
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
 function dragElement(element) {
