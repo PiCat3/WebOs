@@ -4,68 +4,178 @@
   <body class="main">
 
     <div class="topbar" id="topbar">
-      <p id=timeElement style="margin-left: 10px; color: black;">Time</p>
-      <p class="OSname" id="welcomeopen"><img style="width: 6vh; height: 5vh; background-color: rgb(240, 153, 54); border-radius: 16px; padding: 3px;" src="graphics/CatOS_gradient_icon.png"></p>
+      <p id=timeElement style="margin-left: 10px; color: black; font-weight: 500;"><strong>Time</strong></p>
+      <p class="OSname" id="welcomeopen"><img style="width: 60px; height: 50px; background-color: rgb(240, 153, 54); border-radius: 8px;" src="graphics/images/CatOS_gradient_icon.png"></p>
     </div>
 
     <div class="welcomewindow" id="welcome">
 
         <div class="windowheader" id="welcomeheader">
+          <h1 class="headertext"><strong>Welcome</strong></h1>
           <div class="closebutton">
-            <img class="closebuttonimg" id="welcomeclose" src="graphics/CatArmCleaner.png">
+            <img class="closebuttonimg" id="welcomeclose" src="graphics/images/CatArmCleaner.png">
           </div>
         </div>
 
         <h1 class="welcomeheadertext"><strong>Welcome to CatOS</strong></h1>
-        <p class="welcometext"> <strong>CatOS <img class="welcomecatimg" src="graphics/CatHeadImage.jpg"> 
+        <p class="welcometext"> <strong>CatOS <img class="welcomecatimg" src="graphics/images/CatHeadImage.jpg"> 
         is the (very subjectly) best <abbr title="Operating System">OS</abbr> in the world!</strong></p>
         <p></p>
-        <img class="welcomecatimgbig" src="graphics/CatImage.jpg" />
+        <img class="welcomecatimgbig" src="graphics/images/CatImage.jpg" />
     </div>
 
     <div class="catgalleryAPP" id="catgalleryAPP">
       <div style="text-align:center; padding: 16px; width: fit-content;">
-        <img class="catgalleryIcon" id="catgalleryopen" src="graphics/CatGalleryIconClean.png">
-        <p style="margin: 0px; color:black"><strong>Cat Gallery</strong></p>
+        <img class="catgalleryIcon" id="catgalleryopen" src="graphics/images/CatGalleryIconClean.png">
+        <p style="margin: 0px; color:black; text-shadow: 2px 2px 5px orange;"><strong>Cat Gallery</strong></p>
       </div>
     </div>
 
-    <div class="window" id="catgallery">
+    <div class="bigwindow" id="catgallery">
       <div class="windowheader" id="catgalleryheader">
+        <h1 class="headertext"><strong>Cat Gallery</strong></h1>
         <div class="closebutton">
-          <img class="closebuttonimg" id="catgalleryclose" src="graphics/CatArmCleaner.png">
+          <img class="closebuttonimg" id="catgalleryclose" src="graphics/images/CatArmCleaner.png">
         </div>
       </div>
-      <div>
-        <h1 class="headertext"><strong>Cat Gallery</strong></h1>
+      <div class="catgalleryimagessectionclass" id="catgalleryimagessection">
       </div>
-      <div class="catgalleryimagessection">
-           <img class="catgalleryimages" id="catgalleryimages1" src="graphics/catimagesn9.png">
-          <img class="catgalleryimages" id="catgalleryimages2" src="graphics/catimagesn8.2.png">
+      
+      <div class="gallerybuttonsection">
+        <div class="catgallerybutton" id="previousgallerypage">
+          <p> Previous Page </p>
+        </div>
+        <div class="catgallerybutton" id="nextgallerypage">
+          <p> Next Page </p>
+        </div>
       </div>
+
     </div>
 
     <div class="catnotesAPP" id="catnotesAPP">
       <div style="text-align:center; padding: 16px; width:fit-content;">
-        <img class="catnotesIcon" id="catnotesopen" src="graphics/CatNotesIcon.png">
-        <p style="margin:0px; color:black;"><strong>Cat Notes</strong></p>
+        <img class="catnotesIcon" id="catnotesopen" src="graphics/images/CatNotesIcon.png">
+        <p style="margin:0px; color:black; text-shadow: 2px 2px 5px orange;"><strong>Cat Notes</strong></p>
       </div>
     </div>
 
     <div class="window" id="catnotes">
       <div class="windowheader" id="catnotesheader">
+        <h1 class="headertext"><strong>Cat Notes</strong></h1>
         <div class="closebutton">
-          <img class="closebuttonimg" id="catnotesclose" src="graphics/CatArmCleaner.png">
+          <img class="closebuttonimg" id="catnotesclose" src="graphics/images/CatArmCleaner.png">
         </div>
       </div>
-      <div>
-          <h1 class="headertext"><strong>Cat Notes</strong></h1>
+      <div class="catnotespagesep">
+        <div class="catnotescontent" id="catnotescontentsection">
+        </div>
+        <div class="sidebar" id="catnotessidebar">
+          <div class="newnotebutton" id="newcatnote">
+              <p> New Note </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="catscrollAPP" id="catscrollAPP">
+      <div style="text-align:center; padding: 16px; width:fit-content; backdrop-filter: blur(4);">
+        <img class="catscrollIcon" id="catscrollopen" src="graphics/images/CatScrolIIcon.png">
+        <p style="margin:0px; color:black; text-shadow: 2px 2px 5px orange;"><strong>Cat Scroll</strong></p>
+      </div>
+    </div>
+
+    <div class="window" id="catscroll">
+      <div class="windowheader" id="catscrollheader">
+        <h1 class="headertext"><strong>Cat Scroll</strong></h1>
+        <div class="closebutton">
+          <img class="closebuttonimg" id="catscrollclose" src="graphics/images/CatArmCleaner.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="calculatorAPP" id="calculatorAPP">
+      <div style="text-align: center; padding: 16px; width: fit-content;">
+        <img class="calculatorIcon" id="calculatoropen" src="graphics/images/CalculatorIcon.png">
+        <p style="margin:0px; color: black; text-shadow: 2px 2px 5px orange;"> <strong>Calculator</strong></p>
+      </div>
+    </div>
+
+    <div class="smallwindow" id="calculator">
+      <div class="windowheader" id="calculatorheader">
+        <h1 class="headertext"><strong>Calculator</strong></h1>
+        <div class="closebutton">
+          <img class="closebuttonimg" id="calculatorclose" src="graphics/images/CatArmCleaner.png">
+        </div>
+      </div>
+      <div class="calculatorcontentsection">
+        <div class="numdisplay" id="calculatordisplay"></div>
+        <div class="calculatorinputsection">
+          <div class="calcbutton" id="DEL">
+            <p>DEL</p>
+          </div>
+          <div class="calcbutton" id="AC">
+            <p>AC</p>
+          </div>
+          <div class="calcbutton" id="procent">
+            <p>%</p>
+          </div>
+          <div class="calcbutton" id="divide">
+            <p>/</p>
+          </div>
+          <div class="calcbutton" id="b7">
+            <p>7</p>
+          </div>
+          <div class="calcbutton" id="b8">
+            <p>8</p>
+          </div>
+          <div class="calcbutton" id="b9">
+            <p>9</p>
+          </div>
+          <div class="calcbutton" id="multiply">
+            <p>x</p>
+          </div>
+          <div class="calcbutton" id="b4">
+            <p>4</p>
+          </div>
+          <div class="calcbutton" id="b5">
+            <p>5</p>
+          </div>
+          <div class="calcbutton" id="b6">
+            <p>6</p>
+          </div>
+          <div class="calcbutton" id="minus">
+            <p>-</p>
+          </div>
+          <div class="calcbutton" id="b1">
+            <p>1</p>
+          </div>
+          <div class="calcbutton" id="b2">
+            <p>2</p>
+          </div>
+          <div class="calcbutton" id="b3">
+            <p>3</p>
+          </div>
+          <div class="calcbutton" id="plus">
+            <p>+</p>
+          </div>
+          <div class="calcbutton" id="sqrt">
+            <p>√</p>
+          </div>
+          <div class="calcbutton" id="b0">
+            <p>0</p>
+          </div>
+          <div class="calcbutton" id="decimal">
+            <p>.</p>
+          </div>
+          <div class="calcbutton" id="equal">
+            <p>=</p>
+          </div>
+        </div>
       </div>
     </div>
 
     <script type="module" src="./script.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    
+    <link rel="stylesheet" type="text/css" href="style.css" />    
 
   </body>
 
