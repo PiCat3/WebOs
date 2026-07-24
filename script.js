@@ -233,16 +233,41 @@ bAC.addEventListener("click", function() {
 bequal.addEventListener("click", function() {
   var displayContent = document.querySelector("#calculatordisplay");
   var result = 0
-  //for (let i = 0; i < calculatorDisplayContent[0].content.length; i++) {
-  //  let char = calculatorDisplayContent[0].content[i];
-  var num_list = calculatorDisplayContent[0].content.split("+");
-  var n1 = parseInt(num_list[0])
-  var n2 = parseInt(num_list[1])
-  result = n1 + n2;
-  displayContent.innerHTML = result;
-  console.log(calculatorDisplayContent[0].content);
-  console.log(num_list);
-  console.log(n1, n2);
+  for (let i = 0; i < calculatorDisplayContent[0].content.length; i++) {
+    let char = calculatorDisplayContent[0].content[i];
+    if (char == "+") {
+      var num_list = calculatorDisplayContent[0].content.split("+");
+      var n1 = parseFloat(num_list[0])
+      var n2 = parseFloat(num_list[1])
+      result = n1 + n2;
+      calculatorDisplayContent[0].content = result;
+      displayContent.innerHTML = result;
+    }
+    if (char == "-") {
+      var num_list = calculatorDisplayContent[0].content.split("-");
+      var n1 = parseFloat(num_list[0])
+      var n2 = parseFloat(num_list[1])
+      result = n1 - n2;
+      calculatorDisplayContent[0].content = result;
+      displayContent.innerHTML = result;
+    }
+    if (char == "x") {
+      var num_list = calculatorDisplayContent[0].content.split("x");
+      var n1 = parseFloat(num_list[0])
+      var n2 = parseFloat(num_list[1])
+      result = n1 * n2;
+      calculatorDisplayContent[0].content = result;
+      displayContent.innerHTML = result;
+    }
+    if (char == "/") {
+      var num_list = calculatorDisplayContent[0].content.split("/");
+      var n1 = parseFloat(num_list[0])
+      var n2 = parseFloat(num_list[1])
+      result = n1 / n2;
+      calculatorDisplayContent[0].content = result;
+      displayContent.innerHTML = result;
+    }
+  }
 })
 
 //Cat Scroll
